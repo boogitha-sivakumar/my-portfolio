@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>S.Boogitha</title>
+    <link rel="icon" type="image/png" href="./images/logo.png" />
+    <!-- Link -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+      $(window).scroll(function () {
+        var sticky = $(".header"),
+          scroll = $(window).scrollTop();
+        if (scroll >= 20) sticky.addClass("fixed");
+        else sticky.removeClass("fixed");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="body_banner">
+      <!-- Navbar -- Start -->
+      <nav class="navbar navbar-expand-lg navbar-light header">
+        <div class="container">
+          <a class="navbar_brand" href="">
+            <img class="logo" src="./images/logo.png" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="lists collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">HOME </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">EDUCATION </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SKILLS </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">EXPERIENCES </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -- End -->
+
+      <!-- Home Banner -- Start -->
+      <div class="home_banner">
+        <div class="container">
+          <div class="big_txts">
+            <h1>S.BOOGITHA</h1>
+          </div>
+          <div class="small_txts">
+            <h6>
+              I thrive on creating beautiful <br />
+              and functional user experiences.
+            </h6>
+          </div>
+        </div>
+      </div>
+      <!-- Home Banner -- End -->
+    </div>
+  </body>
+</html>

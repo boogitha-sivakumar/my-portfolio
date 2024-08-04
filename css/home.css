@@ -1,0 +1,35 @@
+/* Background and texts -- start*/
+.home_banner {
+  background: #040404;
+  height: 100%;
+  padding-bottom: 100px;
+  padding-top: 67px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.lists {
+  margin-right: 0px;
+}
+
+.big_txts h1 {
+  font-size: 65px;
+  font-weight: 600;
+  margin-top: 85px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.small_txts h6 {
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 23px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+/* Background and texts -- end*/
+
+/* Responsive -- Start */
+/* Responsive --End */
