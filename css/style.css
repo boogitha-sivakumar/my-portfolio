@@ -24,6 +24,10 @@
   gap: 20px;
 }
 
+img.logo {
+  padding-top: 25px;
+}
+
 .nav-item .nav-link {
   font-size: 14px;
   font-weight: 700;
