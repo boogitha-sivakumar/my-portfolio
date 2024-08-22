@@ -89,6 +89,122 @@ img.person_img1 {
 }
 
 /* Background and texts -- end*/
+.education_page {
+  background: #040404;
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.panel {
+  flex: 1;
+  margin: 0 10px;
+  max-width: 250px;
+  height: 270px;
+  width: 190px;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel:hover .card {
+  filter: blur(1.5px);
+}
+
+.panel:hover .card1 {
+  background-size: 215% 135%;
+}
+
+.panel:hover .title {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.panel:hover .border {
+  border: 2px solid rgba(255, 255, 255, 1); /* Thicker border for visibility */
+}
+
+.panel:hover .slide {
+  bottom: 0px;
+}
+
+.card,
+.border,
+.slide,
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #f0ead6;
+  position: relative;
+  transition: all 1s;
+  height: 270px;
+  width: 190px;
+}
+
+.card.card1,
+.card.card2,
+.card.card3 {
+  border: none;
+}
+
+p {
+  text-align: center;
+  position: absolute;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  transition: all 1s;
+  top: 0;
+  color: #f0ead6;
+}
+
+.para {
+  bottom: 0;
+  font-size: 12px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.para .percentage {
+  font-size: 20px;
+  font-weight: 800px;
+}
+
+.panel .border {
+  position: absolute;
+  width: 275px;
+  height: 300px;
+  transition: border 1s;
+  border: none !important;
+}
+
+.slide {
+  backdrop-filter: blur(20px);
+  height: 260px;
+  width: 180px;
+  position: absolute;
+  border: 1px solid black;
+  bottom: -270px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: bottom 1s;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.fa-plane {
+  font-size: 12px;
+}
+
+.edu_contents {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -200px;
+}
 
 /* Responsive -- Start */
 /* Responsive --End */
