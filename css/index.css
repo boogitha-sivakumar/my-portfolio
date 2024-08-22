@@ -2,7 +2,6 @@
 .home_banner {
   background: #040404;
   height: 1000px;
-  /* padding-bottom: 100px; */
   padding-top: 67px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -47,10 +46,8 @@ img.person_img1 {
   border-radius: 35px;
   color: #ffffff;
   position: relative;
-  /* box-shadow: 0.5px; */
   font-size: 15px;
   padding: 0.5px;
-  /* rotate: 0.5px; */
   width: 200px;
   height: 50px;
   margin-left: -10px;
@@ -89,15 +86,13 @@ img.person_img1 {
 }
 
 /* Background and texts -- end*/
-
+/* Education - Start */
 .education_banner {
   background: #040404;
-  height: 1000px;
+  height: 500px;
   background-size: 100%;
   background-repeat: no-repeat;
-}
-.education_contents {
-  margin-top: -100px;
+  margin-top: -175px;
 }
 
 .grid {
@@ -117,6 +112,7 @@ img.person_img1 {
 
 .item:hover {
   --expand: 1;
+  z-index: 1;
 }
 
 .item:before,
@@ -171,6 +167,101 @@ img.person_img1 {
 .item__content .logo {
   padding-bottom: 20px;
 }
+/* Education - End */
 
+/* Experience - Start */
+.experience_banner {
+  background: #040404;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+.experience_content {
+  border-radius: 12px;
+  /* border: 1px solid rgba(255, 255, 255, 0.125); */
+  padding: 38px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.experience_content .card {
+  background: #040404;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  height: 500px;
+  width: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  color: white;
+  font-size: 2.4rem;
+  padding: 20px;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 150%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.button-wrapper {
+  margin-top: 18px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.outline {
+  background: transparent;
+  color: rgba(0, 212, 255, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.outline:hover {
+  transform: scale(1.125);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.fill {
+  background: rgba(0, 212, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.fill:hover {
+  transform: scale(1.125);
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+  transition: all 0.3s ease;
+}
+/* Experience - End */
 /* Responsive -- Start */
 /* Responsive --End */
