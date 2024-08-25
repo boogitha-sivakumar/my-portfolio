@@ -42,6 +42,23 @@
           .scrollIntoView({ behavior: "smooth" });
       }
     </script>
+    <script>
+      function submitForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email_address").value;
+        const message = document.getElementById("message").value;
+
+        // Construct mailto URL
+        const subject = encodeURIComponent("Contact Form Submission");
+        const body = encodeURIComponent(
+          `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`
+        );
+        const mailtoUrl = `mailto:boogitha.sivakumar@gmail.com?subject=${subject}&body=${body}`;
+
+        // Open the default email client with pre-filled information
+        window.location.href = mailtoUrl;
+      }
+    </script>
   </head>
 
   <body>
@@ -405,24 +422,34 @@
                 <div class="contact_form">
                   <div class="row">
                     <div class="col-lg-6 form_v">
-                      <label for="first_name">Name</label>
-                      <input type="text" value="John" name="" id="" />
+                      <label for="name">Name</label>
+                      <input type="text" value="John" name="name" id="name" />
                     </div>
                     <div class="col-lg-6 form_v">
-                      <label for="last_name">Email Address</label>
-                      <input type="text" value="Doe" name="" id="" />
-                    </div>
-                    <div class="col-lg-12 form_v">
-                      <label for="country">Message</label> <br />
+                      <label for="email_address">Email Address</label>
                       <input
                         type="text"
-                        placeholder="Write your message.."
-                        name=""
-                        id=""
+                        value="abc@gmail.com"
+                        name="email"
+                        id="email_address"
                       />
                     </div>
+                    <div class="col-lg-12 form_v">
+                      <label for="message">Message</label> <br />
+                      <textarea
+                        placeholder="Write your message.."
+                        name="message"
+                        id="message"
+                      ></textarea>
+                    </div>
                   </div>
-                  <button class="send_button">Send</button>
+                  <button
+                    type="button"
+                    class="send_button"
+                    onclick="submitForm()"
+                  >
+                    Send
+                  </button>
                 </div>
               </div>
             </div>
