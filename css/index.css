@@ -187,12 +187,11 @@ img.person_img1 {
 /* Skills - Start */
 .skills_banner {
   background: #040404;
-  height: 1000px;
 }
 
 .skills_content {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: grid;
   place-items: center;
 }
