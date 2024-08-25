@@ -324,7 +324,6 @@ p {
   border-radius: 20px;
   transition: all 0.3s;
   color: white;
-  border: solid 1px rgb(107, 107, 107);
   text-align: left;
 }
 
@@ -332,9 +331,10 @@ p {
   width: 375px;
   height: 400px;
   background-color: #040404;
-  border-radius: 0px;
+  border-radius: 20px;
   transition: all 0.2s;
   padding: 20px;
+  border: solid 1px #8a8a8a;
 }
 
 .card .card2:hover {
