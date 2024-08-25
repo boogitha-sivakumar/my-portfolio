@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Title -->
-    <title>S.Boogitha</title>
+    <title>Boogitha Sivakumar</title>
     <link rel="icon" type="image/png" href="./images/logo.png" />
     <!-- Link -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery.min.js"></script>
@@ -20,6 +24,16 @@
         if (scroll >= 20) sticky.addClass("fixed");
         else sticky.removeClass("fixed");
       });
+    </script>
+    <script>
+      function toggleDetails() {
+        var details = document.getElementById("details");
+        if (details.style.display === "none" || details.style.display === "") {
+          details.style.display = "block";
+        } else {
+          details.style.display = "none";
+        }
+      }
     </script>
   </head>
 
@@ -171,28 +185,58 @@
             <div class="row">
               <h3>Languages</h3>
               <div class="container">
-                <img src="./images/L1.png" alt="">
-                <img src="./images/L2.png" alt="">
-                <img src="./images/L3.png" alt="">
-                <img src="./images/L4.png" alt="">
+                <div class="blocks">
+                  <img src="./images/L1.png" alt="" />
+                  <h3>HTML</h3>
+                </div>
+                <div class="blocks">
+                  <img src="./images/L2.png" alt="" />
+                  <h3>CSS</h3>
+                </div>
+                <div class="blocks">
+                  <img src="./images/L3.png" alt="" />
+                  <h3>JavaScript</h3>
+                </div>
+                <div class="blocks">
+                  <img src="./images/L4.png" alt="" />
+                  <h3>Java</h3>
+                </div>
               </div>
             </div>
-            
+
             <div class="row">
               <h3>Design Tools</h3>
               <div class="container">
-                <img src="./images/d1.png" alt="">
-                <img src="./images/d2.png" alt="">
+                <div class="blocks">
+                  <img src="./images/d1.png" alt="" />
+                  <h3>Figma</h3>
+                </div>
+                <div class="blocks">
+                  <img src="./images/d2.png" alt="" />
+                  <h3>Canva</h3>
+                </div>
               </div>
             </div>
-            
+
             <div class="row">
               <h3>Other Tools</h3>
               <div class="container">
-                <img src="./images/ot1.png" alt="">
-                <img src="./images/ot2.png" alt="">
-                <img src="./images/ot3.png" alt="">
-                <img src="./images/ot4.png" alt="">
+                <div class="blocks">
+                  <img src="./images/ot1.png" alt="" />
+                  <h3>MatLab</h3>
+                </div>
+                <div class="blocks">
+                  <img src="./images/ot2.png" alt="" />
+                  <h3>LTSpice</h3>
+                </div>
+                <div class="blocks">
+                  <img src="./images/ot3.png" alt="" />
+                  <h3>ModelSim</h3>
+                </div>
+                <div class="blocks">
+                  <img src="./images/ot4.png" alt="" />
+                  <h3>Cadence Virtuoso</h3>
+                </div>
               </div>
             </div>
           </div>
@@ -200,7 +244,7 @@
       </div>
       <!-- Skills - End -->
 
-       <!-- Experience - Start -->
+      <!-- Experience - Start -->
       <div class="experience_banner">
         <div class="container">
           <div id="experience_content" class="experience_content">
@@ -208,19 +252,88 @@
               <div class="wrapper">
                 <div class="text-content">
                   <h2>Experience</h2>
-                  <p>Lorem ipsum dolor sit amet,<br/>consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <!-- <div class="button-wrapper">
-                <button class="btn outline">DETAILS</button>
-                <button class="btn fill">BUY NOW</button>
-              </div> -->
-            </div>
-            <div class="card">
-              <div class="wrapper">
-                <div class="text-content">
-                  <h2>Projects</h2>
-                  <p>Lorem ipsum dolor sit amet,<br/>consectetur adipiscing elit.</p>
+                  <div class="experiences">
+                    <div class="card">
+                      <div class="card2">
+                        <h3>
+                          Member of Design Team <br />
+                          <span>
+                            IEEE Computer Society <br />
+                            Chennai, India <br />
+                            April 2024 - Present
+                          </span>
+                        </h3>
+                        <ul>
+                          <li>
+                            Club Website: <br />
+                            Contributed to developing the club's website,
+                            enhancing user interface design, and optimizing it
+                            for better user engagement and functionality.
+                          </li>
+                          <li>
+                            “Git Good” Poster – An Online Event: <br />
+                            Designed posters for the 'Git Good' online event,
+                            ensuring clear communication of event information
+                            and maximizing participant interest.
+                          </li>
+                          <li>
+                            Paradox – CTF Event: <br />
+                            Involved in the Paradox – CTF event as an organizing
+                            committee member, assisting with event organization.
+                          </li>
+                        </ul>
+                        <!-- <button>View</button> -->
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card2">
+                        <h3>
+                          Frontend Web Developer Intern <br />
+                          <span>
+                            Team Tweaks Technologies PVT. LTD. <br />
+                            Chennai, India (Remote) <br />
+                            June 2024
+                          </span>
+                        </h3>
+                        <ul>
+                          <li>
+                            Developed the front end of a full-stack website.
+                          </li>
+                          <li>
+                            Involved in front-end development activities namely
+                            HTML, Bootstrap Framework, CSS, JavaScript, and
+                            Responsive Interface.
+                          </li>
+                        </ul>
+                        <!-- <button>View</button> -->
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card2">
+                        <h3>
+                          VLSI Design Intern <br />
+                          <span>
+                            Chennai, India (Online) <br />
+                            Maven Silicon, India <br />
+                            June 2024 – July 2024
+                          </span>
+                        </h3>
+                        <ul>
+                          <li>
+                            Completed extensive training in VLSI and Verilog,
+                            mastering key concepts through tutorials and
+                            assessments.
+                          </li>
+                          <li>
+                            Applied this knowledge to independently develop and
+                            document a RISC-V ISA & RV32I RTL design project
+                            from scratch.
+                          </li>
+                        </ul>
+                        <!-- <button>View</button> -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- <div class="button-wrapper">
@@ -232,7 +345,77 @@
         </div>
       </div>
       <!-- Experience - End -->
+
+      <!-- Contact page -- Start -->
+      <div class="contact_page">
+        <div class="container">
+          <div class="row connect_with_us">
+            <div class="col-lg-12 left_contents">
+              <h1>Connect with me</h1>
+
+              <div class="contact_content">
+                <div class="details">
+                  <a class="links" href="">
+                    <img src="./images/phone_call.png" alt="phone_call" />
+                    9791077952
+                  </a>
+                  <a class="links" href="">
+                    <img src="./images/mail.png" alt="mail" />
+                    boogitha.sivakumar@gmail.com
+                  </a>
+                  <a class="links" href="">
+                    <img src="./images/location.png" alt="location" />
+                    No. 46, Gandhi Street, <br />
+                    Karunanidhi Nagar, <br />
+                    Nanganallur, <br />
+                    Chennai - 600061
+                  </a>
+                  <div class="contact_icons">
+                    <a class="social" href="">
+                      <img src="./images/twitter.png" alt="twitter"
+                    /></a>
+                    <a class="social" href="">
+                      <img src="./images/insta.png" alt="insta"
+                    /></a>
+                    <a class="social" href=""
+                      ><img src="./images/discord.png" alt="discord"
+                    /></a>
+                  </div>
+                </div>
+                <div class="contact_form">
+                  <div class="row">
+                    <div class="col-lg-6 form_v">
+                      <label for="first_name">Name</label>
+                      <input type="text" value="John" name="" id="" />
+                    </div>
+                    <div class="col-lg-6 form_v">
+                      <label for="last_name">Email Address</label>
+                      <input type="text" value="Doe" name="" id="" />
+                    </div>
+                    <div class="col-lg-12 form_v">
+                      <label for="country">Message</label> <br />
+                      <input
+                        type="text"
+                        placeholder="Write your message.."
+                        name=""
+                        id=""
+                      />
+                    </div>
+                  </div>
+                  <button class="send_button">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section>
+            <div class="air air1"></div>
+            <div class="air air2"></div>
+            <div class="air air3"></div>
+            <div class="air air4"></div>
+          </section>
+        </div>
       </div>
+      <!-- Contact page -- End -->
     </div>
   </body>
 </html>
