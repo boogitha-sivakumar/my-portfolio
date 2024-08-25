@@ -473,6 +473,7 @@ p {
 
 .left_contents .details {
   width: 50%;
+  padding-left: 50px;
 }
 
 textarea#message {
