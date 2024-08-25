@@ -482,6 +482,7 @@ textarea#message {
   width: 420px;
   height: 25px;
   font-size: medium;
+  color: white;
 }
 
 .contact_form button {

@@ -42,23 +42,6 @@
           .scrollIntoView({ behavior: "smooth" });
       }
     </script>
-    <script>
-      function submitForm() {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email_address").value;
-        const message = document.getElementById("message").value;
-
-        // Construct mailto URL
-        const subject = encodeURIComponent("Contact Form Submission");
-        const body = encodeURIComponent(
-          `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`
-        );
-        const mailtoUrl = `mailto:boogitha.sivakumar@gmail.com?subject=${subject}&body=${body}`;
-
-        // Open the default email client with pre-filled information
-        window.location.href = mailtoUrl;
-      }
-    </script>
   </head>
 
   <body>
@@ -423,13 +406,13 @@
                   <div class="row">
                     <div class="col-lg-6 form_v">
                       <label for="name">Name</label>
-                      <input type="text" value="John" name="name" id="name" />
+                      <input type="text" value="" name="name" id="name" />
                     </div>
                     <div class="col-lg-6 form_v">
                       <label for="email_address">Email Address</label>
                       <input
                         type="text"
-                        value="abc@gmail.com"
+                        value=""
                         name="email"
                         id="email_address"
                       />
@@ -443,13 +426,9 @@
                       ></textarea>
                     </div>
                   </div>
-                  <button
-                    type="button"
-                    class="send_button"
-                    onclick="submitForm()"
-                  >
-                    Send
-                  </button>
+                  <a href="mailto:boogitha.sivakumar@gmail.com">
+                    <button>Send</button>
+                  </a>
                 </div>
               </div>
             </div>
