@@ -108,6 +108,7 @@ img.person_img1 {
   text-align: center;
   color: #ffffff;
   font-size: 50px;
+  padding-bottom: 15px;
 }
 
 .grid {
@@ -229,6 +230,11 @@ img.person_img1 {
   padding-bottom: 10px;
 }
 
+.skills_content .row2 {
+  display: flex;
+  flex-direction: row;
+}
+
 .row .blocks {
   display: flex;
   flex-direction: column;
@@ -297,6 +303,8 @@ img.person_img1 {
 .text-content h2 {
   color: white;
   padding: 20px;
+  font-size: 50px;
+  padding-bottom: 15px;
 }
 
 p {
