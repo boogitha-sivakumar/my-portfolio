@@ -5,6 +5,11 @@
 }
 
 /* Navbar -- Start */
+/* This will ensure that the Home section is always scrolled into view when the page loads. */
+#home:target {
+  scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}
+
 .navbar .navbar-toggler {
   border: none;
 }
@@ -18,7 +23,7 @@
 
 .header.fixed {
   background: #010101;
-  z-index: 1;
+  z-index: 10;
   transition: background 0.01s ease-in-out;
 }
 

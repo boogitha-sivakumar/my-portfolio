@@ -18,9 +18,14 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script>
+      // Scroll to the top of the page on reloading the page
+      window.onload = function () {
+        window.scrollTo(0, 0);
+      };
+
       $(document).ready(function () {
-        // Scroll-based active class application
-        $(window).scroll(function () {
+        // Function to add the active class to the correct navbar item
+        function setActiveNavItem() {
           var scrollPos = $(document).scrollTop();
           var currentActive = null;
 
@@ -46,36 +51,23 @@
           if (currentActive) {
             $("a[href='#" + currentActive + "']").addClass("active");
           }
+        }
+
+        // Ensure no navbar link has the 'active' class on page load
+        $(window).on("load", function () {
+          // Apply the active class to "Home" link by default
+          if ($(document).scrollTop() === 0) {
+            $("a[href='#home_banner']").addClass("active"); // Make sure "Home" link is active by default
+          }
+
+          // Call the function to check which section is in view
+          setActiveNavItem();
         });
 
-        // On page load, ensure no navbar link has the 'active' class
-        $(window).on("load", function () {
-          // Remove 'active' class from all navbar items
-          $(".nav-item .nav-link").removeClass("active");
-
-          // Check if there's a section specified in the URL hash and apply active class accordingly
-          var currentHash = window.location.hash;
-
-          // If there's no hash, set 'Home' as active when on the top of the page
-          if (!currentHash && $(document).scrollTop() === 0) {
-            $("a[href='#home']").addClass("active"); // Make sure "Home" link is active by default
-          }
-
-          // If a hash exists, apply active class to the corresponding navbar link
-          if (currentHash) {
-            // Set the navbar link corresponding to the section in the URL hash as active
-            $("a[href='" + currentHash + "']").addClass("active");
-
-            // Scroll to the section if the hash is present
-            if ($(currentHash).length) {
-              $("html, body").animate(
-                {
-                  scrollTop: $(currentHash).offset().top - 50, // Offset for navbar height
-                },
-                0
-              );
-            }
-          }
+        // Scroll-based active class application
+        $(window).scroll(function () {
+          // Apply the active class based on the current scroll position
+          setActiveNavItem();
         });
 
         // Sticky navbar on scroll
@@ -138,7 +130,7 @@
           >
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#home_banner">HOME </a>
+                <a class="nav-link active" href="#home_banner">HOME </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#education_content">EDUCATION</a>
