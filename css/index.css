@@ -1,6 +1,6 @@
 /* Background and texts -- start*/
 .home_banner {
-  background: #040404;
+  background: #010101;
   height: 1000px;
   padding-top: 67px;
   background-size: 100%;
@@ -94,15 +94,15 @@ img.person_img1 {
 .button .cords .rectangle1 {
   margin-left: 1.5em;
 }
-
 /* Background and texts -- end*/
+
 /* Education - Start */
 .education_banner {
-  background: #040404;
+  background: #010101;
   height: 500px;
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-top: -175px;
+  margin-top: -300px;
 }
 .education_banner h2 {
   text-align: center;
@@ -113,7 +113,7 @@ img.person_img1 {
 
 .grid {
   display: flex;
-  gap: 1.5rem;
+  justify-content: space-around;
 }
 
 .grid-cols-3 {
@@ -159,7 +159,8 @@ img.person_img1 {
   color: white;
   border: solid 1px white;
   text-align: center;
-  width: 425px;
+  width: 395px;
+  padding: 15px;
 }
 
 .item__content span {
@@ -202,7 +203,7 @@ img.person_img1 {
 
 /* Skills - Start */
 .skills_banner {
-  background: #040404;
+  background: #010101;
 }
 
 .skills_content {
@@ -273,7 +274,7 @@ img.person_img1 {
 
 /* Experience - Start */
 .experience_banner {
-  background: #040404;
+  background: #010101;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,7 +293,7 @@ img.person_img1 {
 }
 
 .experience_content .card {
-  background: #040404;
+  background: #010101;
 }
 
 .wrapper {
@@ -343,7 +344,7 @@ p {
 .card .card2 {
   width: 375px;
   height: 400px;
-  background-color: #040404;
+  background-color: #010101;
   border-radius: 20px;
   transition: all 0.2s;
   padding: 20px;
@@ -379,7 +380,7 @@ p {
 .contact_page {
   position: relative;
   height: 647px;
-  background: #040404;
+  background: #010101;
   height: 100%;
 }
 

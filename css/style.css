@@ -8,6 +8,7 @@
 .navbar .navbar-toggler {
   border: none;
 }
+
 .navbar.navbar-expand-lg {
   position: fixed !important;
   justify-content: flex-start;
@@ -16,8 +17,9 @@
 }
 
 .header.fixed {
-  background: black;
+  background: #010101;
   z-index: 1;
+  transition: background 0.01s ease-in-out;
 }
 
 .navbar.navbar-expand-lg .navbar-nav {
@@ -31,47 +33,51 @@ img.logo {
 .nav-item .nav-link {
   font-size: 14px;
   font-weight: 700;
-  color: #ffffff;
+  color: #ffffff !important; /* Ensure text is always white */
   margin-top: 25px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth transition */
 }
 
 .nav-item .nav-link:hover {
-  color: white;
+  color: white !important; /* Ensure hover color is white */
 }
 
-.nav-item .nav-link:active {
-  color: white;
+.nav-item .nav-link.active {
+  border-bottom: 3px solid white; /* Thicker underline */
+  font-weight: bold;
+  color: white !important; /* Ensure text color remains white when active */
 }
 
-.nav-item.dropdown .nav-link.show {
-  color: white;
+nav.fixed a {
+  color: white !important; /* Ensure sticky navbar links are white */
 }
 
-.nav-item.dropdown .dropdown-menu {
-  background: #e0e0e0;
-  border-radius: 10px;
-  font-size: 15px;
-  width: 200px;
-  border: none;
-}
-
-.nav-item.dropdown .dropdown-menu li:hover {
-  background: none;
-  font-size: 17px;
-}
-
-a.dropdown-item {
-  font-weight: 600;
-  font-size: 14px;
-  height: 37px;
-  align-content: center;
-}
-
-ul.dropdown-menu.show {
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
 /* Navbar -- End */
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Active Section Underline Effect */
+body {
+  position: relative;
+}
+
+.section {
+  padding-top: 80px; /* Adjust for navbar height */
+}
+
+.section:target {
+  outline: none;
+}
+
+/* Scroll-Based Underline Activation */
+.navbar-nav .nav-item a {
+  transition: text-decoration 0.3s ease-in-out;
+}
 
 /* Responsive -- Start */
 

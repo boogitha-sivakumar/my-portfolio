@@ -18,29 +18,98 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script>
-      $(window).scroll(function () {
-        var sticky = $(".header"),
-          scroll = $(window).scrollTop();
-        if (scroll >= 20) sticky.addClass("fixed");
-        else sticky.removeClass("fixed");
-      });
-    </script>
-    <script>
-      function toggleDetails() {
-        var details = document.getElementById("details");
-        if (details.style.display === "none" || details.style.display === "") {
-          details.style.display = "block";
-        } else {
-          details.style.display = "none";
+      $(document).ready(function () {
+        // Scroll-based active class application
+        $(window).scroll(function () {
+          var scrollPos = $(document).scrollTop();
+          var currentActive = null;
+
+          // Check for each section to apply active class to the corresponding navbar item
+          $(".section").each(function () {
+            var sectionOffset = $(this).offset().top;
+            var sectionHeight = $(this).outerHeight();
+            var sectionId = $(this).attr("id");
+
+            // Check if the section is in view
+            if (
+              scrollPos >= sectionOffset - 50 &&
+              scrollPos < sectionOffset + sectionHeight - 50
+            ) {
+              currentActive = sectionId; // Set the current active section
+            }
+          });
+
+          // Remove 'active' class from all navbar items
+          $(".nav-item .nav-link").removeClass("active");
+
+          // Add 'active' class to the navbar link of the currently active section
+          if (currentActive) {
+            $("a[href='#" + currentActive + "']").addClass("active");
+          }
+        });
+
+        // On page load, ensure no navbar link has the 'active' class
+        $(window).on("load", function () {
+          // Remove 'active' class from all navbar items
+          $(".nav-item .nav-link").removeClass("active");
+
+          // Check if there's a section specified in the URL hash and apply active class accordingly
+          var currentHash = window.location.hash;
+
+          // If there's no hash, set 'Home' as active when on the top of the page
+          if (!currentHash && $(document).scrollTop() === 0) {
+            $("a[href='#home']").addClass("active"); // Make sure "Home" link is active by default
+          }
+
+          // If a hash exists, apply active class to the corresponding navbar link
+          if (currentHash) {
+            // Set the navbar link corresponding to the section in the URL hash as active
+            $("a[href='" + currentHash + "']").addClass("active");
+
+            // Scroll to the section if the hash is present
+            if ($(currentHash).length) {
+              $("html, body").animate(
+                {
+                  scrollTop: $(currentHash).offset().top - 50, // Offset for navbar height
+                },
+                0
+              );
+            }
+          }
+        });
+
+        // Sticky navbar on scroll
+        $(window).scroll(function () {
+          var sticky = $(".header"),
+            scroll = $(window).scrollTop();
+          if (scroll >= 20) sticky.addClass("fixed");
+          else sticky.removeClass("fixed");
+        });
+
+        // Smooth Scroll to Education Section (if needed)
+        window.scrollToEducation = function () {
+          document
+            .getElementById("education_content")
+            .scrollIntoView({ behavior: "smooth" });
+        };
+
+        // Toggle Details (if needed)
+        function toggleDetails() {
+          var details = document.getElementById("details");
+          if (
+            details.style.display === "none" ||
+            details.style.display === ""
+          ) {
+            details.style.display = "block";
+          } else {
+            details.style.display = "none";
+          }
         }
-      }
-    </script>
-    <script>
-      function scrollToEducation() {
-        document
-          .getElementById("education_content")
-          .scrollIntoView({ behavior: "smooth" });
-      }
+
+        // Expose the toggleDetails and scrollToEducation functions globally
+        window.toggleDetails = toggleDetails;
+        window.scrollToEducation = scrollToEducation;
+      });
     </script>
   </head>
 
@@ -94,7 +163,7 @@
       <!-- Navbar -- End -->
 
       <!-- Home Banner -- Start -->
-      <div id="home_banner" class="home_banner">
+      <div id="home_banner" class="home_banner section">
         <div class="container">
           <div class="home_contents">
             <div class="big_txts">
@@ -135,7 +204,7 @@
       <!-- Home Banner -- End -->
 
       <!-- Education -- Start -->
-      <div id="education_content" class="education_banner">
+      <div id="education_content" class="education_banner section">
         <div class="container">
           <h2>Education</h2>
           <div class="education_contents">
@@ -201,7 +270,7 @@
       <!-- Education - End -->
 
       <!-- Skills - Start -->
-      <div id="skills_content" class="skills_banner">
+      <div id="skills_content" class="skills_banner section">
         <div class="container">
           <div class="skills_content">
             <h2>Skills</h2>
@@ -270,7 +339,7 @@
       <!-- Skills - End -->
 
       <!-- Experience - Start -->
-      <div id="experience_content" class="experience_banner">
+      <div id="experience_content" class="experience_banner section">
         <div class="container">
           <div class="experience_content">
             <div class="card">
@@ -368,7 +437,7 @@
       <!-- Experience - End -->
 
       <!-- Contact page -- Start -->
-      <div id="contact_page" class="contact_page">
+      <div id="contact_page" class="contact_page section">
         <div class="container">
           <div class="row connect_with_us">
             <div class="col-lg-12 left_contents">
