@@ -104,6 +104,11 @@ img.person_img1 {
   background-repeat: no-repeat;
   margin-top: -175px;
 }
+.education_banner h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+}
 
 .grid {
   display: flex;
