@@ -137,7 +137,7 @@ img.person_img1 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: hsl(0, 0%, 5%);
+  background: #010101;
   border: 2px solid white;
   top: 0;
   left: 0;
