@@ -109,6 +109,7 @@ img.person_img1 {
   color: #ffffff;
   font-size: 50px;
   padding-bottom: 15px;
+  z-index: 10;
 }
 
 .grid {
@@ -380,7 +381,7 @@ p {
 .contact_page {
   position: relative;
   height: 647px;
-  background: #010101;
+  /* background: #010101; */
   height: 100%;
 }
 
