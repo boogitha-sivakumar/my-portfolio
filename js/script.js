@@ -36,8 +36,8 @@ function init() {
   const particlesMaterial = new THREE.PointsMaterial({
     color: 0xffffff,
     size: 2,
-    opacity: 0.5, // Set the opacity to 0.5
-    transparent: true, // Enable transparency
+    opacity: 0.5,
+    transparent: true,
   });
 
   particles = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -57,7 +57,7 @@ function init() {
   renderer.domElement.style.left = "0";
   renderer.domElement.style.width = "100%";
   renderer.domElement.style.height = "100%";
-  renderer.domElement.style.zIndex = "0";
+  renderer.domElement.style.zIndex = "-1";
 
   document.body.style.touchAction = "none";
   document.body.addEventListener("pointermove", onPointerMove);

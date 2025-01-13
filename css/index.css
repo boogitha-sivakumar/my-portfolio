@@ -1,6 +1,6 @@
 /* Background and texts -- start*/
 .home_banner {
-  background: #010101;
+  /* background: #010101; */
   height: 1000px;
   padding-top: 67px;
   background-size: 100%;
@@ -98,7 +98,7 @@ img.person_img1 {
 
 /* Education - Start */
 .education_banner {
-  background: #010101;
+  /* background: #010101; */
   height: 500px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -204,7 +204,7 @@ img.person_img1 {
 
 /* Skills - Start */
 .skills_banner {
-  background: #010101;
+  /* background: #010101; */
 }
 
 .skills_content {
@@ -275,7 +275,7 @@ img.person_img1 {
 
 /* Experience - Start */
 .experience_banner {
-  background: #010101;
+  /* background: #010101; */
   display: flex;
   align-items: center;
   justify-content: center;
