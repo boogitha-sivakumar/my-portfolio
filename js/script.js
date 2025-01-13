@@ -19,7 +19,7 @@ function init() {
   scene = new THREE.Scene();
 
   const particlesGeometry = new THREE.BufferGeometry();
-  const particlesCount = 20000;
+  const particlesCount = 5000;
   const positions = [];
 
   for (let i = 0; i < particlesCount; i++) {
