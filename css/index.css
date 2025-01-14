@@ -210,6 +210,10 @@ img.person_img1 {
   display: grid;
   place-items: center;
 }
+.skills_content img {
+  width: 100px;
+}
+
 .skills_content h2 {
   font-size: 50px;
   font-weight: 900px;
@@ -272,7 +276,6 @@ img.person_img1 {
 
 /* Experience - Start */
 .experience_banner {
-  /* background: #010101; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,11 +377,97 @@ p {
 
 /* Experience - End */
 
+/* Project - Start */
+
+.heading-section h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.heading-section h2 {
+  font-size: 1.75em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.heading-section p {
+  font-size: 1em;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.project {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.project .overlay {
+  border: 2px #fff solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+.project:hover .overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.project .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.project .text h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project .text span {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.project a {
+  text-decoration: none;
+  color: white;
+}
+
+.ftco-animate {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* Project - End */
+
 /* Contact page -- Start */
 .contact_page {
   position: relative;
   height: 647px;
-  /* background: #010101; */
   height: 100%;
 }
 
