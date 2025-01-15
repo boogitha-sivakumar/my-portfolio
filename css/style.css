@@ -31,6 +31,13 @@
   gap: 20px;
 }
 
+.navbar_brand {
+  text-decoration: none;
+  color: white;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
 img.logo {
   padding-top: 25px;
 }

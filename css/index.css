@@ -1,4 +1,4 @@
-/* Background and texts -- start*/
+/* Background and home banner -- start*/
 .home_banner {
   /* background: #010101; */
   height: 1000px;
@@ -12,12 +12,13 @@
 }
 
 .home_contents {
-  margin-top: 225px;
-  margin-left: 220px;
+  width: 750px;
+  margin-top: 160px;
+  margin-left: 75px;
 }
 
 .big_txts h1 {
-  font-size: 65px;
+  font-size: 50px;
   font-weight: 600;
   margin-top: 85px;
   margin-bottom: 25px;
@@ -25,10 +26,10 @@
 }
 
 .small_txts h6 {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: lighter;
   color: #ffffff;
-  line-height: 35px;
+  line-height: 30px;
   margin-top: -10px;
   margin-bottom: 30px;
 }
@@ -36,7 +37,7 @@
 img.person_img1 {
   position: absolute;
   top: 50px;
-  right: 150px;
+  right: 40px;
   width: 800px;
 }
 
@@ -52,7 +53,7 @@ img.person_img1 {
   border-radius: 35px;
   color: #ffffff;
   position: relative;
-  font-size: 15px;
+  font-size: 18px;
   padding: 0.5px;
   width: 200px;
   height: 50px;
@@ -60,13 +61,14 @@ img.person_img1 {
 }
 
 .button2 {
-  width: 100px;
+  width: 130px;
+  height: 55px;
 }
 
 .button:hover {
   rotate: -3deg;
   color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+  box-shadow: 0 5px 15px rgba(233, 224, 239, 0.4);
 }
 
 .button:active {
@@ -94,7 +96,7 @@ img.person_img1 {
 .button .cords .rectangle1 {
   margin-left: 1.5em;
 }
-/* Background and texts -- end*/
+/* Background and home banner -- end*/
 
 /* Education - Start */
 .education_banner {
@@ -102,7 +104,7 @@ img.person_img1 {
   height: 500px;
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-top: -300px;
+  margin-top: -350px;
 }
 .education_banner h2 {
   text-align: center;
@@ -411,6 +413,7 @@ p {
   padding: 15px;
   background: black;
   border: 1px white solid;
+  text-align: center;
 }
 .image {
   width: 100%;
@@ -436,7 +439,7 @@ p {
 
 .desc {
   text-align: justify;
-  padding: 15px 15px 15px 0px;
+  padding: 7px 10px 10px 10px;
   color: white;
   font-size: 14px;
   line-height: 1.25rem;
