@@ -12,9 +12,8 @@
 }
 
 .home_contents {
-  width: 750px;
   margin-top: 160px;
-  margin-left: 75px;
+  margin-left: 110px;
 }
 
 .big_txts h1 {
@@ -26,75 +25,182 @@
 }
 
 .small_txts h6 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: lighter;
   color: #ffffff;
   line-height: 30px;
   margin-top: -10px;
   margin-bottom: 30px;
+  width: 660px;
+}
+
+.small_txts h6 span {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.typewriter {
+  margin-bottom: -20px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ffffff;
+  max-width: 100%;
+  animation: typing 7s steps(40, end) infinite, blink 0.5s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%; /* Fully typed */
+  }
+  90% {
+    width: 100%; /* Pause before deleting */
+  }
+  100% {
+    width: 0; /* Reset to start typing again */
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 img.person_img1 {
   position: absolute;
-  top: 50px;
-  right: 40px;
-  width: 800px;
+  top: 0px;
+  right: 0px;
+  width: 900px;
 }
 
 .home_contents .buttons {
   display: flex;
   flex-direction: row;
   gap: 24px;
+  width: 172px;
 }
 
-.button {
-  background-color: #000000;
-  border: 1px solid #ffffff;
-  border-radius: 35px;
-  color: #ffffff;
-  position: relative;
-  font-size: 18px;
-  padding: 0.5px;
-  width: 200px;
-  height: 50px;
-  margin-left: -10px;
+.button_wrap {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center; /* Centers the button vertically */
+  height: auto;
 }
 
-.button2 {
-  width: 130px;
+.container.button_wrap {
+  width: 172px;
   height: 55px;
 }
 
-.button:hover {
-  rotate: -3deg;
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(233, 224, 239, 0.4);
+.type--C {
+  --line_color: #ffffff; /* Dark blue color for borders and text */
+  --back_color: #defffa; /* Light aqua background for animated elements */
 }
 
-.button:active {
-  scale: 0.99;
+.button {
+  position: relative;
+  z-index: 0;
+  width: 240px; /* Button width */
+  height: 56px; /* Button height */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Font size */
+  font-weight: bold; /* Bold text */
+  color: var(--line_color); /* Text color */
+  letter-spacing: 2px; /* Spacing between letters */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.cords {
-  left: 0;
-  top: 0;
-  right: 0;
-  left: 0;
+.button__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button::before,
+.button::after,
+.button__text::before,
+.button__text::after {
+  content: "";
   position: absolute;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line_color);
+  transition: all 0.5s ease; /* Smooth animation */
+}
+
+.button::before {
+  top: 0;
+  left: 54px;
+  width: calc(100% - 56px * 2 - 16px);
+}
+
+.button::after {
+  top: 0;
+  right: 54px;
+  width: 8px;
+}
+
+.button__text::before {
+  bottom: 0;
+  right: 54px;
+  width: calc(100% - 56px * 2 - 16px);
+}
+
+.button__text::after {
+  bottom: 0;
+  left: 54px;
+  width: 8px;
+}
+
+.button__line {
+  position: absolute;
+  top: 0;
+  width: 56px;
+  height: 100%;
   overflow: hidden;
 }
 
-.button .cords {
-  top: 0;
-  bottom: 0;
+.button__line::before {
+  content: "";
   position: absolute;
-  transform: skew(20deg);
+  top: 0;
+  width: 150%;
   height: 100%;
-  transition: left 0.4s linear;
+  box-sizing: border-box;
+  border-radius: 300px;
+  border: solid 3px var(--line_color);
 }
 
-.button .cords .rectangle1 {
-  margin-left: 1.5em;
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before {
+  left: 0;
+}
+
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before {
+  right: 0;
+}
+
+.button:hover {
+  letter-spacing: 6px;
+}
+
+.button:hover::before,
+.button:hover .button__text::before {
+  width: 8px;
+}
+
+.button:hover::after,
+.button:hover .button__text::after {
+  width: calc(100% - 56px * 2 - 16px);
 }
 /* Background and home banner -- end*/
 
@@ -166,41 +272,32 @@ img.person_img1 {
   padding: 15px;
 }
 
-.item__content span {
-  font-size: 25px;
-  font-weight: 700;
-  color: #fff; /* Change text color to white */
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 3px #fff;
-  }
-  to {
-    text-shadow: 0 0 2px #fff;
-  }
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 3px #fff;
-  }
-  to {
-    text-shadow: 0 0 2px #fff;
-  }
-}
-
-/* Example usage */
-.glowing-text {
-  animation: glow 1s infinite alternate;
-  -webkit-animation: glow 1s infinite alternate;
-}
-
 .item__content .logo {
   padding-bottom: 20px;
+}
+
+.flex-grow {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.item__content span {
+  width: 135px;
+  height: 60px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #010101;
+  background: linear-gradient(135deg, #ffffff, #c9c9c9);
+  border-radius: 50px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 /* Education - End */
 
