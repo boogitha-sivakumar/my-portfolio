@@ -35,7 +35,7 @@
   text-decoration: none;
   color: white;
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 img.logo {
@@ -43,13 +43,14 @@ img.logo {
 }
 
 .nav-item .nav-link {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
-  color: #ffffff !important; /* Ensure text is always white */
-  margin-top: 25px;
+  color: #ffffff !important;
+  margin-top: 20px;
   text-decoration: none;
   padding-bottom: 5px;
-  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth transition */
+  transition: color 0.3s ease-in-out;
+  text-decoration: 0.3s ease-in-out;
 }
 
 .nav-item .nav-link:hover {
